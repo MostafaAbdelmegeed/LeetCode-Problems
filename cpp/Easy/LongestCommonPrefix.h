@@ -9,6 +9,10 @@
  * If there is no common prefix, return an empty string "".
  */
 
+#ifndef LONGEST_COMMON_PREFIX_HEADER
+#define LONGEST_COMMON_PREFIX_HEADER
+
+
 #include <iostream>
 #include <string>
 #include <vector>
@@ -42,8 +46,4 @@ string longestCommonPrefix(vector<string> &strs) {
     return lcp;
 }
 
-int main() {
-    vector<string> vec = vector<string>({"flower", "flow", "flight"});
-    cout << longestCommonPrefix(vec) << endl;
-    return 0;
-}
+#endif

@@ -14,6 +14,8 @@
     3. Every close bracket has a corresponding open bracket of the same type.
  */
 
+#ifndef VALID_PARENTHESES_HEADER
+#define VALID_PARENTHESES_HEADER
 
 #include <iostream>
 #include <stack>
@@ -33,7 +35,4 @@ bool isValid(string s) {
     else return false;
 }
 
-int main() {
-    cout << isValid("{([])}") << endl;
-    return 0;
-}
+#endif
