@@ -26,4 +26,4 @@ bool containsDuplicate(vector<int>& nums) {
 }
 
 
-#endif LEETCODE_LEETCODE_CONTAINSDUPLICATE_H
+#endif LEETCODE_CONTAINSDUPLICATE_H
