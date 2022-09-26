@@ -8,8 +8,8 @@
  *Given an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct.
  */
 
-#ifndef LEETCODE_FIRSTLETTERTOAPPEARTWICE_H
-#define LEETCODE_FIRSTLETTERTOAPPEARTWICE_H
+#ifndef LEETCODE_CONTAINSDUPLICATE_H
+#define LEETCODE_CONTAINSDUPLICATE_H
 
 bool containsDuplicate(vector<int>& nums) {
         // Create an unordered set (O(N) Time).
@@ -26,4 +26,4 @@ bool containsDuplicate(vector<int>& nums) {
 }
 
 
-#endif //LEETCODE_FIRSTLETTERTOAPPEARTWICE_H
+#endif LEETCODE_LEETCODE_CONTAINSDUPLICATE_H
