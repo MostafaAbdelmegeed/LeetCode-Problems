@@ -13,6 +13,29 @@
 #include "TwoSum.h"
 #include "FirstLetterToAppearTwice.h"
 #include "FirstUniqueCharacterInAString.h"
+#include "RunningSumOf1dArray.h"
+#include "FindPivotIndex.h"
+
+TEST(Easy, FindPivotIndex) {
+    vector<int> vec1 = {1, 7, 3, 6, 5, 6};
+    vector<int> vec2 = {1, 2, 3};
+    vector<int> vec3 = {2, 1, -1};
+    EXPECT_EQ(pivotIndex(vec1), 3);
+    EXPECT_EQ(pivotIndex(vec2), -1);
+    EXPECT_EQ(pivotIndex(vec3), 0);
+}
+
+TEST(Easy, RunningSumOf1dArray) {
+    vector<int> vec1 = {1, 2, 3, 4};
+    vector<int> vec1_ans = {1, 3, 6, 10};
+    vector<int> vec2 = {1, 1, 1, 1, 1};
+    vector<int> vec2_ans = {1, 2, 3, 4, 5};
+    vector<int> vec3 = {3, 1, 2, 10, 1};
+    vector<int> vec3_ans = {3, 4, 6, 16, 17};
+    EXPECT_EQ(runningSum(vec1), vec1_ans);
+    EXPECT_EQ(runningSum(vec2), vec2_ans);
+    EXPECT_EQ(runningSum(vec3), vec3_ans);
+}
 
 TEST(Easy, FirstUniqueCharacterInAString) {
     string s1 = "leetcode";
