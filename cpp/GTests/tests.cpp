@@ -15,6 +15,37 @@
 #include "FirstUniqueCharacterInAString.h"
 #include "RunningSumOf1dArray.h"
 #include "FindPivotIndex.h"
+#include "MergeTwoSortedLists.h"
+#include "IsomorphicStrings.h"
+#include "IsSubsequence.h"
+
+TEST(Easy, IsSubsequence) {
+    string s = "abc", t = "ahbgdc";
+    EXPECT_TRUE(isSubsequence(s, t));
+    s = "axc", t = "ahbgdc";
+    EXPECT_FALSE(isSubsequence(s, t));
+}
+
+TEST(Easy, IsomorphicStrings) {
+    string s = "egg", t = "add";
+    EXPECT_TRUE(isIsomorphic(s, t));
+    s = "foo", t = "bar";
+    EXPECT_FALSE(isIsomorphic(s, t));
+    s = "paper", t = "title";
+    EXPECT_TRUE(isIsomorphic(s, t));
+}
+
+TEST(Easy, MergeTwoSortedLists) {
+    ListNode *list1 = new ListNode(1, new ListNode(2, new ListNode(4, nullptr)));
+    ListNode *list2 = new ListNode(1, new ListNode(3, new ListNode(4, nullptr)));
+    ListNode *list3 = nullptr;
+    ListNode *list4 = nullptr;
+    ListNode *list5 = nullptr;
+    ListNode *list6 = new ListNode(0, nullptr);
+    EXPECT_EQ(mergeTwoLists(list1, list2)->val, 1);
+    EXPECT_EQ(mergeTwoLists(list3, list4), nullptr);
+    EXPECT_EQ(mergeTwoLists(list5, list6)->val, 0);
+}
 
 TEST(Easy, FindPivotIndex) {
     vector<int> vec1 = {1, 7, 3, 6, 5, 6};
