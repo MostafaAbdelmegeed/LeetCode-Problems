@@ -10,8 +10,9 @@
   Return the running sum of nums.
  */
 
-#ifndef LEETCODE_FIRSTLETTERTOAPPEARTWICE_H
-#define LEETCODE_FIRSTLETTERTOAPPEARTWICE_H
+#ifndef LEETCODE_RUNNINGSUMOFONEDARRAY_H
+#define LEETCODE_RUNNINGSUMOFONEDARRAY_H
+
 
 vector<int> runningSum(vector<int>& nums) {
         //Initializing a vector array.
@@ -28,4 +29,4 @@ vector<int> runningSum(vector<int>& nums) {
         return v;
 }
 
-#endif //LEETCODE_FIRSTLETTERTOAPPEARTWICE_H
+#endif //LEETCODE_RUNNINGSUMOFONEDARRAY_H
