@@ -19,9 +19,9 @@ vector<int> runningSum(vector<int>& nums) {
         //Initializing an incrementor.
         int n = 0;
         // Looping through the vector ref. array.
-        for(int i = 1; i<nums.size();++i){
+        for(int i = 0; i<nums.size();++i){
             // Getting the index and pushing into our new vector
-            n = n + i;
+            n = n + nums[i];
             v.push_back(n);
         }
         // Returning the final result
