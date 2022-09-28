@@ -18,6 +18,33 @@
 #include "MergeTwoSortedLists.h"
 #include "IsomorphicStrings.h"
 #include "IsSubsequence.h"
+#include "ReverseLinkedList.h"
+#include "MiddleOfTheLinkedList.h"
+
+TEST(Easy, MiddleOfTheLinkedList) {
+    ListNode *ln1 = new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(4, new ListNode(5, nullptr)))));
+    ListNode *ln2 = new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(4, new ListNode(5, new ListNode(6,
+                                                                                                                 nullptr))))));
+    EXPECT_EQ(middleNode(ln1)->val, 3);
+    EXPECT_EQ(middleNode(ln2)->val, 4);
+}
+
+TEST(Easy, ReverseLinkedList) {
+    ListNode *ln1 = new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(4, new ListNode(5, nullptr)))));
+    ListNode *ln2 = new ListNode(1, new ListNode(2, nullptr));
+    ListNode *ln3 = nullptr;
+    ln1 = reverseList(ln1);
+    ln2 = reverseList(ln2);
+    ln3 = reverseList(ln3);
+    EXPECT_EQ(ln1->val, 5);
+    EXPECT_EQ(ln1->next->val, 4);
+    EXPECT_EQ(ln1->next->next->val, 3);
+    EXPECT_EQ(ln1->next->next->next->val, 2);
+    EXPECT_EQ(ln1->next->next->next->next->val, 1);
+    EXPECT_EQ(ln2->val, 2);
+    EXPECT_EQ(ln2->next->val, 1);
+    EXPECT_EQ(ln3, nullptr);
+}
 
 TEST(Easy, IsSubsequence) {
     string s = "abc", t = "ahbgdc";

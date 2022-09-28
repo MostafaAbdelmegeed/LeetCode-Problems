@@ -8,8 +8,18 @@
 #include <vector>
 #include <string>
 #include <iostream>
+#include "common.h"
 
 using namespace std;
+
+void printList(const ListNode *ln) {
+    cout << "[ ";
+    while (ln != nullptr) {
+        cout << ln->val << ", ";
+        ln = ln->next;
+    }
+    cout << "]" << endl;
+}
 
 template<typename T>
 void printVector(vector<T> vec) {

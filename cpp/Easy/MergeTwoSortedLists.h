@@ -38,19 +38,9 @@ Both list1 and list2 are sorted in non-decreasing order.*/
 
 #include <vector>
 #include <algorithm>
+#include "../Helper/common.h"
 
 using namespace std;
-
-struct ListNode {
-    int val;
-    ListNode *next;
-
-    ListNode() : val(0), next(nullptr) {}
-
-    ListNode(int x) : val(x), next(nullptr) {}
-
-    ListNode(int x, ListNode *next) : val(x), next(next) {}
-};
 
 ListNode *mergeTwoLists(ListNode *list1, ListNode *list2) {
     vector<int> vec;
